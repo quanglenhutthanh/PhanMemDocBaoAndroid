@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//src/Adapter/ContentAdapter.java=UTF-8
+encoding//src/Adapter/RssItemAdapter.java=UTF-8
+encoding//src/Adapter/WebsiteListAdapter.java=UTF-8
+encoding//src/DataHelper/CategoryDataAdapter.java=UTF-8
+encoding//src/DataHelper/ContentDataAdapter.java=UTF-8
+encoding//src/DataHelper/WebsiteDataAdapter.java=UTF-8
+encoding//src/Utilities/UnCaughtException.java=UTF-8
+encoding//src/com/example/phanmemdocbao/AddWebsiteActivity.java=UTF-8
+encoding//src/com/example/phanmemdocbao/ArticleView.java=UTF-8
+encoding//src/com/example/phanmemdocbao/CategoryCheckboxActivity.java=UTF-8
+encoding//src/com/example/phanmemdocbao/ContentActivity.java=UTF-8
+encoding//src/com/example/phanmemdocbao/ListWebsiteActivity.java=UTF-8
+encoding//src/com/example/phanmemdocbao/MainActivity.java=UTF-8
+encoding//src/com/example/phanmemdocbao/RSSItemListActivity.java=UTF-8
+encoding//src/com/example/phanmemdocbao/RSSItemListFragment.java=UTF-8
+encoding//src/com/example/phanmemdocbao/WebsiteCheckboxActivity.java=UTF-8

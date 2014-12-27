@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="10dip"
+        android:text="Thông tin trang báo"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Blue"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="20dip"
+        android:text="Tên báo"
+        android:textColor="@color/Orange"
+        android:textStyle="bold" />
+
+    <!-- Input Text -->
+
+    <EditText
+        android:id="@+id/editTextWebsiteName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="6dip" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="20dip"
+        android:text="Địa chỉ website"
+        android:textColor="@color/Orange"
+        android:textStyle="bold" />
+
+    <!-- Input Text -->
+
+    <EditText
+        android:id="@+id/editTextWebsiteLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="6dip"
+        android:hint="http://www.example.com" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="20dip"
+        android:text="Địa chỉ RSS"
+        android:textColor="@color/Orange"
+        android:textStyle="bold" />
+
+    <!-- Input Text -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextRssLink"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="8dip"
+            android:layout_weight="1"
+            android:hint="http://www.example.com" />
+
+        <ImageButton
+            android:id="@+id/btnSearchRssLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="0dip"
+            android:background="@null"
+            android:src="@drawable/search" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginLeft="15dip"
+        android:background="@drawable/button_custom"
+        android:text="Lưu"
+        android:textColor="@color/White"
+        android:textStyle="bold" />
+
+</LinearLayout>

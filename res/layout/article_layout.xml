@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/article_layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" 
+>
+
+    <LinearLayout
+        android:id="@+id/nnnnn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.04"
+        android:orientation="vertical" 
+        android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+        >
+
+        <WebView
+            android:id="@+id/webViewRSSItem"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.94" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/article_layout_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@color/Violet"  >
+
+        <ImageButton
+            android:id="@+id/buttonBrowse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginLeft="15dip"
+            android:background="@null"
+            android:src="@drawable/browse"
+          />
+
+        <ImageButton
+            android:id="@+id/buttonShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginLeft="10dip"
+            android:background="@null"
+            android:src="@drawable/share" />
+
+        <LinearLayout
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:background="@color/Violet"
+             >
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginLeft="5dip"
+            android:background="@null"
+            android:src="@drawable/add"
+            />
+    </LinearLayout>
+
+</LinearLayout>

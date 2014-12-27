@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thông tin chuyên mục"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dip"
+        android:layout_marginTop="10dip"
+        android:textColor="@color/Blue"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	<TextView
+                android:id="@+id/list_item_subtext"
+                android:text="Tên"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="20dip"
+                android:textStyle="bold"
+                android:textColor="@color/Orange" />
+
+            <EditText
+                android:id="@+id/add_content_layout_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="6dip"
+        		android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+              <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dip"
+                android:layout_marginLeft="15dip"
+              
+                android:textColor="@color/Orange"
+                android:textStyle="bold"
+                android:text="Mô tả" />
+
+            <EditText
+                android:id="@+id/add_content_layout_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+        		android:layout_marginLeft="15dip"
+        		android:layout_marginRight="15dip"
+                android:layout_marginTop="6dip"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/add_content_layout_btnLuu"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/button_custom"
+                android:text="Lưu"
+                android:textColor="@color/White"
+                android:textStyle="bold" />
+
+</LinearLayout>

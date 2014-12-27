@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/categoryDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="105dip"
+        android:layout_marginTop="20dip"
+        android:gravity="center_vertical"
+        android:text="No Connection"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Orange"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_gravity="center_horizontal"
+        android:text="Retry" 
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/button_custom"/>
+		
+</LinearLayout>
