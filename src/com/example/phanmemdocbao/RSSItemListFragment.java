@@ -57,10 +57,10 @@ public class RSSItemListFragment extends ListFragment {
 		if(!networkUtility.isConnectedFast(getActivity())){
 			Toast.makeText(getActivity(), "Mạng chậm", Toast.LENGTH_LONG).show();
 		}
-		for(int i=0; i<feeds.size();i++){
-			mAsyncTask = new LoadNews(10);
+		//for(int i=0; i<feeds.size();i++){
+			mAsyncTask = new LoadNews(7);
 			mAsyncTask.execute();
-		}
+		//}
 	}
 	
 	@Override
@@ -103,9 +103,6 @@ public class RSSItemListFragment extends ListFragment {
         }
          
         protected String doInBackground(String... args) {
-        	//try
-        	//{
-        		// updating UI from Background Thread
         		WebsiteDataAdapter websiteAdapter = new WebsiteDataAdapter(getActivity());
 	        	websiteAdapter.open();
 	        	RSSParser parser = new RSSParser();
@@ -115,24 +112,22 @@ public class RSSItemListFragment extends ListFragment {
 	        		XmlPullFeedParser pa = new XmlPullFeedParser(xml,u.getWebsite());
 	        		List<RSSItem> list = new ArrayList<RSSItem>();
 	        		list = pa.parse();
-	        		for(RSSItem item:list){
-	        			//item.setSi(u.getSiteName());
-	        			if(count > limit){
-	        				
-	        				Set<RSSItem> set = new HashSet<RSSItem>(newsList);
-							List<RSSItem> listData = new ArrayList<RSSItem>(set);
-							Collections.sort(listData);
-	        				adapter=new RssItemAdapter(getActivity(), listData,1);
-	        				newsList = listData;
-	        				break;
+	        		//if(list!=null){
+	        			for(RSSItem item:list){
+		        			//item.setSi(u.getSiteName());
+		        			if(count < limit){
+		        				newsList.add(item);
+		        				count++;
+			        		}
 		        		}
-	        			newsList.add(item);
-	        			count++;
-	        		}
-	        		if(count > limit){
-	        			break;
-	        		}
+	        			Set<RSSItem> set = new HashSet<RSSItem>(newsList);
+	    				List<RSSItem> listData = new ArrayList<RSSItem>(set);
+	    				Collections.sort(listData);
+	    				adapter=new RssItemAdapter(getActivity(), listData,1);
+	    				newsList = listData;
+	        			count = 0;
 	        	}
+	    		
 	    		feeds.remove(0);
 	    		//adapter=new RssItemAdapter(getActivity(), newsList,1);        
 	    		//return null;
@@ -155,6 +150,7 @@ public class RSSItemListFragment extends ListFragment {
         //After completing background task set adapter for list
         protected void onPostExecute(String args) {
             // dismiss the dialog after getting all products
+        	adapter.notifyDataSetChanged();
         	setListAdapter(adapter);
             //pDialog.dismiss();
         }

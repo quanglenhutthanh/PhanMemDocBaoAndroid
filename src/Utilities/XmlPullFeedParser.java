@@ -44,7 +44,7 @@ public class XmlPullFeedParser{
 	static final  String TITLE = "title";
 	static final  String ITEM = "item";
 	public List<RSSItem> parse() {
-		List<RSSItem> messages = null;
+		List<RSSItem> messages = new ArrayList<RSSItem>();
 		
 		try {
 			// auto-detect the encoding from the stream
@@ -118,7 +118,7 @@ public class XmlPullFeedParser{
 	        }
 	        
 		} catch (Exception e) {
-			//Log.e("AndroidNews::PullFeedParser", e.getMessage(), e);
+			Log.e("AndroidNews::PullFeedParser", e.getMessage(), e);
 			//throw new RuntimeException(e);
 		}
 		return messages;

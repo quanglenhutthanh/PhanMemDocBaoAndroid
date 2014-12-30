@@ -23,7 +23,8 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 			// Top Rated fragment activity
 			//Fragment fr = (Fragment)RSSItemListFragment();
 			//return new TopRatedFragment();
-			return new RSSItemListFragment();
+			return new WebsiteGridFragment();
+			//return new RSSItemListFragment();
 		case 1:
 			// Games fragment activity
 			return new WebsiteGridFragment();

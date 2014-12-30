@@ -150,6 +150,7 @@ public class RSSParser {
 		String Xml = null;
 		try {
 			if(rssUrl != null){
+				System.setProperty("http.keepAlive", "false");
 				DefaultHttpClient httpClient = new DefaultHttpClient();
 				HttpGet httpGet = new HttpGet(rssUrl);
 				HttpResponse httpResponse = httpClient.execute(httpGet);

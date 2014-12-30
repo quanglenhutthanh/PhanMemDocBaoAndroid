@@ -246,7 +246,7 @@ public class RSSItemListActivity extends Activity {
 					List<RSSItem> itemList = new ArrayList<RSSItem>();
 					xml = parser.getXmlFromUrl(feed.getLink()); // getting XML
 																// from URL
-					// Log.d("Xml",xml);
+					//Log.d("Xml",xml);
 					XmlPullFeedParser pa = new XmlPullFeedParser(xml,
 							feed.getWebsite());
 					try {
