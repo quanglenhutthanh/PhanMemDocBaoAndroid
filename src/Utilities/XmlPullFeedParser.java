@@ -2,29 +2,16 @@ package Utilities;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-
 import org.apache.commons.lang.StringEscapeUtils;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
-
-
-
-import DataHelper.WebsiteDataAdapter;
 import Entities.RSSItem;
 import Entities.Website;
-import android.content.Context;
 import android.util.Log;
-import android.util.Xml;
 
 public class XmlPullFeedParser{
 	String Xml;
@@ -61,7 +48,7 @@ public class XmlPullFeedParser{
 				boolean done = false;
 				int count = 0;
 				
-				while (eventType != XmlPullParser.END_DOCUMENT && !done && count<=15){
+				while (eventType != XmlPullParser.END_DOCUMENT && !done && count<=25){
 					String name = null;
 					switch (eventType){
 						case XmlPullParser.START_DOCUMENT:

@@ -1,28 +1,15 @@
 package com.example.phanmemdocbao;
-
-
-
 import java.util.ArrayList;
 import java.util.List;
-
-
 import Adapter.ContentAdapter;
-import Adapter.WebsiteListAdapter;
 import DataHelper.ContentDataAdapter;
-import DataHelper.FeedDataAdapter;
-import DataHelper.WebsiteDataAdapter;
-import Entities.Category;
 import Entities.Content;
-import Entities.RSSFeed;
-import Entities.Website;
 import android.app.ListFragment;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class ContentListFragment extends ListFragment{
 	ContentDataAdapter contentDataAdapter;

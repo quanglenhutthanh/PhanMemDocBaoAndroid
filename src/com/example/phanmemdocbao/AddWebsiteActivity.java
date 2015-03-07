@@ -5,7 +5,6 @@ import Entities.RSSFeed;
 import Entities.Website;
 import Utilities.RSSParser;
 import Utilities.UnCaughtException;
-import android.R.integer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;

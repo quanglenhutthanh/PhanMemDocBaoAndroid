@@ -1,11 +1,4 @@
 package com.example.phanmemdocbao;
-
-
-
-import java.io.IOException;
-
-import DataHelper.WebsiteDataAdapter;
-import Entities.Website;
 import Utilities.UnCaughtException;
 import android.os.Bundle;
 import android.app.Activity;
@@ -13,11 +6,8 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ListWebsiteActivity extends Activity{
 	//private final Context mContext;

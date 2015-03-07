@@ -2,14 +2,8 @@ package com.example.phanmemdocbao;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
-
-import Adapter.CategoryCheckBoxAdapter;
 import Adapter.FeedCheckBoxAdapter;
-import DataHelper.CategoryDataAdapter;
 import DataHelper.FeedDataAdapter;
-import Entities.Category;
 import Entities.RSSFeed;
 import Utilities.UnCaughtException;
 import android.app.Activity;

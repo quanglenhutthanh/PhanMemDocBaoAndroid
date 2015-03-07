@@ -1,27 +1,17 @@
 package com.example.phanmemdocbao;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import Adapter.CategoryAdapter;
-import Adapter.WebsiteListAdapter;
 import DataHelper.CategoryDataAdapter;
 import DataHelper.FeedDataAdapter;
-import DataHelper.WebsiteDataAdapter;
 import Entities.Category;
 import Entities.RSSFeed;
-import Entities.Website;
 import android.support.v4.app.ListFragment;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
 
 public class CategoryListFragment extends ListFragment{
 	CategoryDataAdapter categoryDataAdapter;

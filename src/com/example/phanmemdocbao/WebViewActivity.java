@@ -1,19 +1,16 @@
 package com.example.phanmemdocbao;
 
-import DataHelper.DataHelper;
 import Utilities.UnCaughtException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
-import android.widget.Toast;
+
 
 public class WebViewActivity extends Activity {
 	String link;

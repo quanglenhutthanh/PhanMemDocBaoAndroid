@@ -2,13 +2,8 @@ package com.example.phanmemdocbao;
 
 import java.util.ArrayList;
 import java.util.List;
-
-
-
-import DataHelper.CategoryDataAdapter;
 import DataHelper.ContentDataAdapter;
 import DataHelper.FeedDataAdapter;
-import Entities.Category;
 import Entities.Content;
 import Entities.RSSFeed;
 import Utilities.UnCaughtException;
@@ -18,7 +13,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class AddContentActivity extends Activity {

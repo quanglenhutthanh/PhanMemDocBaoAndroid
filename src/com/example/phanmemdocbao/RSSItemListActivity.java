@@ -12,15 +12,11 @@ import DataHelper.RSSItemDataAdapter;
 import DataHelper.WebsiteDataAdapter;
 import Entities.RSSFeed;
 import Entities.RSSItem;
-import Entities.Website;
 import Utilities.*;
-import android.R.integer;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -31,7 +27,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
 
 public class RSSItemListActivity extends Activity {
 	// XML node keys
@@ -91,20 +86,11 @@ public class RSSItemListActivity extends Activity {
 			for (int id : ids) {
 				feedList.add(feedDataAdapter.GetFeedById(id));
 			}
-			new LoadNews(10).execute();
+			new LoadNews(20).execute();
 			firsttime = false;
 			//for (int i = 0; i < feedList.size(); i++) {
 			//}
 		}
-
-		/*
-		 * for(RSSFeed f:feedList){ test += "; " + f.get_id();
-		 * Toast.makeText(RSSItemListActivity.this,
-		 * test,Toast.LENGTH_LONG).show(); }
-		 */
-
-		// Thread.setDefaultUncaughtExceptionHandler(new
-		// UnCaughtException(RSSItemListActivity.this));
 	}
 
 	public boolean isOnline() {
@@ -114,7 +100,7 @@ public class RSSItemListActivity extends Activity {
 	}
 
 	class LoadNews extends AsyncTask<String, String, String> {
-		int limit = 5;
+		int limit = 20;
 
 		public LoadNews(int limit) {
 			this.limit = limit;
@@ -167,14 +153,6 @@ public class RSSItemListActivity extends Activity {
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
 							int position, long id) {
-						/*
-						 * String link = newsList.get(position).getLink(); Uri
-						 * address = Uri.parse(link); Intent androidDocs = new
-						 * Intent(Intent.ACTION_VIEW, address);
-						 * startActivity(androidDocs);
-						 */
-						// Toast.makeText(RSSItemListActivity.this,newsList.get(position).getWebsite().getName()+" - "+newsList.get(position).getLink()
-						// , Toast.LENGTH_LONG).show();
 						Intent intent = new Intent(RSSItemListActivity.this,
 								ArticleView.class);
 						Bundle bundle = new Bundle();
@@ -224,9 +202,6 @@ public class RSSItemListActivity extends Activity {
 	}
 
 	public void SetupListView(int limit) {
-		// StrictMode.ThreadPolicy policy = new
-		// StrictMode.ThreadPolicy.Builder().permitAll().build();
-		// StrictMode.setThreadPolicy(policy);
 		try {
 			if (flag == 2) {
 				RSSItemDataAdapter rssItemDataAdapter = new RSSItemDataAdapter(
@@ -253,35 +228,16 @@ public class RSSItemListActivity extends Activity {
 						itemList = pa.parse();// parse xml into RSSItemlist
 					} catch (Exception ex) {
 						break;
-						// Log.d("ERROR",feed.getLink());
-						// continue;
 					}
 					for (final RSSItem item : itemList) {
-						// if(count < 50){
 						Log.d("ADD", feed.getLink());
-						/*
-						 * if(count > limit){ Collections.sort(newsList);
-						 * Set<RSSItem> set = new HashSet<RSSItem>(newsList);
-						 * List<RSSItem> list = new ArrayList<RSSItem>(set);
-						 * adapter = new
-						 * RssItemAdapter(RSSItemListActivity.this, list,1);
-						 * break; }
-						 */
 						newsList.add(item);
-						/*
-						 * RSSItemListActivity.this.runOnUiThread(new Runnable()
-						 * {
-						 * 
-						 * @Override public void run() { // TODO Auto-generated
-						 * method stub newsList.add(item); } }); count++;
-						 * Log.d("COUNT",String.valueOf(count));
-						 */
 					}
 
-					if (count > limit) {
+					/*if (count > limit) {
 						Log.d("break", feed.getLink());
 						break;
-					}
+					}*/
 				}
 				
 				Set<RSSItem> set = new HashSet<RSSItem>(newsList);

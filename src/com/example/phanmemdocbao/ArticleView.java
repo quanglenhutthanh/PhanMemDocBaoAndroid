@@ -1,69 +1,33 @@
 package com.example.phanmemdocbao;
-
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.StringReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.jsoup.Connection.Response;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
-
-import DataHelper.FeedDataAdapter;
 import DataHelper.RSSItemDataAdapter;
 import DataHelper.WebsiteDataAdapter;
-import Entities.RSSFeed;
 import Entities.RSSItem;
-import Utilities.RSSParser;
 import Utilities.UnCaughtException;
-import Utilities.XmlPullFeedParser;
 import Utilities.networkUtility;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.transition.Transition;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.View.OnClickListener;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.webkit.WebSettings;
 import android.webkit.WebSettings.LayoutAlgorithm;
 import android.webkit.WebView;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class ArticleView extends Activity{
@@ -127,7 +91,7 @@ public class ArticleView extends Activity{
 		ImageButton share = (ImageButton)findViewById(R.id.buttonShare);
 		final ImageButton add = (ImageButton)findViewById(R.id.buttonAdd);
 		
-		LinearLayout layout_main = (LinearLayout)findViewById(R.id.article_layout_main);
+		//LinearLayout layout_main = (LinearLayout)findViewById(R.id.article_layout_main);
 		layout_action = (LinearLayout)findViewById(R.id.article_layout_action);	
 		final WebView w= (WebView)findViewById(R.id.webViewRSSItem);
 		layout_action.setVisibility(View.VISIBLE);
@@ -143,15 +107,6 @@ public class ArticleView extends Activity{
 			@Override
 			public boolean onTouch(View arg0, MotionEvent touchevent) {
 				// TODO Auto-generated method stub
-				/*if(event.getAction() == MotionEvent.ACTION_MOVE){
-					//Toast.makeText(ArticleView.this, "up", Toast.LENGTH_SHORT).show();
-					//mVolHandler.postDelayed(mVolRunnable, 6000);
-					//layout_action.setVisibility(View.VISIBLE);
-					//return false;
-					
-				}
-				mVolHandler.postDelayed(mVolRunnable, 4000);
-				return false;*/
 				 switch (touchevent.getAction())
                  {
                         // when user first touches the screen we get x and y coordinate
@@ -166,19 +121,7 @@ public class ArticleView extends Activity{
                              x2 = touchevent.getX();
                              y2 = touchevent.getY(); 
 
-                             //if left to right sweep event on screen
-                             /*if (x1 < x2) 
-                             {
-                                 Toast.makeText(ArticleView.this, "Left to Right Swap Performed", Toast.LENGTH_LONG).show();
-                              }
-                            
-                             // if right to left sweep event on screen
-                             if (x1 > x2)
-                             {
-                                 Toast.makeText(ArticleView.this, "Right to Left Swap Performed", Toast.LENGTH_LONG).show();
-                             }
-                            */
-                             // if UP to Down sweep event on screen
+                             
                              if (y1 < y2) 
                              {
                                  //Toast.makeText(ArticleView.this, "UP to Down Swap Performed", Toast.LENGTH_LONG).show();
@@ -201,9 +144,6 @@ public class ArticleView extends Activity{
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				/*Uri address = Uri.parse(link);
-				Intent androidDocs = new Intent(Intent.ACTION_VIEW, address);
-				startActivity(androidDocs);*/
 				Toast.makeText(getApplicationContext(), link, Toast.LENGTH_LONG).show();
 				Intent intent = new Intent(ArticleView.this,WebViewActivity.class); 
 				Bundle bundle  = new Bundle();

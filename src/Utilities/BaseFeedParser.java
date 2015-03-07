@@ -1,14 +1,9 @@
 package Utilities;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.util.Scanner;
 
-import android.util.Log;
 
 public abstract class BaseFeedParser implements FeedParser {
 

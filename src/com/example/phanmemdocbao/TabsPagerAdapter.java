@@ -1,7 +1,5 @@
 package com.example.phanmemdocbao;
-import java.util.List;
 
-import android.support.v4.app.ListFragment;
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

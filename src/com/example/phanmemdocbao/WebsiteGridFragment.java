@@ -2,28 +2,23 @@ package com.example.phanmemdocbao;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import Adapter.WebsiteGridAdapter;
-import Adapter.WebsiteListAdapter;
 import DataHelper.FeedDataAdapter;
 import DataHelper.WebsiteDataAdapter;
 import Entities.RSSFeed;
 import Entities.Website;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView.OnItemClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.GridView;
-import android.widget.ListView;
+
 
 public class WebsiteGridFragment extends Fragment{
 	WebsiteDataAdapter websiteDataAdapter;

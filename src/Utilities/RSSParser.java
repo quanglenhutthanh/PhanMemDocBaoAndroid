@@ -1,24 +1,14 @@
 package Utilities;
 import org.apache.commons.lang.StringEscapeUtils;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.StringReader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -29,23 +19,11 @@ import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.jsoup.select.Elements;
 import org.w3c.dom.NodeList;
-
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
 import Entities.RSSItem;
-import android.app.ListFragment;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
-
 import org.w3c.dom.Node;
 
 
@@ -56,15 +34,13 @@ public class RSSParser {
     private static String TAG_TITLE = "title";
     private static String TAG_LINK = "link";
     private static String TAG_DESRIPTION = "description";
-    private static String TAG_LANGUAGE = "language";
+    
     private static String TAG_ITEM = "item";
     private static String TAG_PUB_DATE = "pubDate";
     private static String TAG_GUID = "guid";
-    private static String TAG_IMG = "image";
-    private static Bitmap bitmap = null;
+    
 	
 	public List<RSSItem> getRSSItems(String Xml){
-		String t = Xml;
 		List<RSSItem> itemsList = new ArrayList<RSSItem>();
 		if(Xml != null){
 			Document doc = this.getDomElement(Xml);

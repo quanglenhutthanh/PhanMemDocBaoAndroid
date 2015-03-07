@@ -1,20 +1,13 @@
 package com.example.phanmemdocbao;
 
-import DataHelper.FeedDataAdapter;
 import DataHelper.WebsiteDataAdapter;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ListFragment;
-import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
+
 
 public class mListFragment extends ListFragment{
 	public interface onListItemClickListener {
